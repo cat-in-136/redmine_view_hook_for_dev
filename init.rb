@@ -9,7 +9,13 @@ Redmine::Plugin.register :redmine_view_hook_for_dev do
   author_url 'https://github.com/cat-in-136/'
 end
 
-module RedmineViewHookForDev
+class RedmineViewHookForDevHook < Redmine::Hook::ViewListener
+  def view_layouts_base_html_head(context={})
+    '<style type="text/css">.redmine_view_hook_for_dev { font-weight: bold; color: red; }</style>'
+  end
+end
+
+module RedmineViewHookForDevPatch
   def self.included(base)
     base.singleton_class.send(:prepend, RedmineHookPatch)
   end
@@ -24,4 +30,4 @@ module RedmineViewHookForDev
   end
 end
 
-Redmine::Hook.send(:include, RedmineViewHookForDev)
+Redmine::Hook.send(:include, RedmineViewHookForDevPatch)
