@@ -1,0 +1,30 @@
+= Redmine View Hook for Dev plugin
+
+This plugin shows view-hook place for development.
+
+For example, this plugin inserts following code at the +view_layouts_base_body_bottom+ hook:
+
+    <p class="redmine_view_hook_for_dev">view_layouts_base_body_bottom</p>
+
+== How to install
+
+* Download the plugin to your 'plugins/' directory
+* Restart your redmine
+
+Note: migration is not required.
+
+== How to uninstall
+
+* Remove the plugin from your 'plugins/' directory
+* Restart your redmine
+
+Note: migration is not required.
+
+== License
+
+MIT
+
+== References
+
+* <https://www.redmine.org/projects/redmine/wiki/Hooks_List>
+* Redmine PluginのViewの拡張ポイント（View hook）がどこにあるか？を列挙する <https://qiita.com/digdagdag/items/424ae1055d66d4672ca1>
