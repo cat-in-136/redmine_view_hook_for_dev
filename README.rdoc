@@ -1,6 +1,6 @@
 = Redmine View Hook for Dev plugin
 
-This plugin shows view-hook place for development.
+This plugin shows the view-hook locations for redmine-plugin development.
 
 For example, this plugin inserts following code at the +view_layouts_base_body_bottom+ hook:
 
@@ -11,14 +11,14 @@ For example, this plugin inserts following code at the +view_layouts_base_body_b
 * Download the plugin to your 'plugins/' directory
 * Restart your redmine
 
-Note: migration is not required.
+Note: "rake redmine:plugins:migrate" is not required.
 
 == How to uninstall
 
 * Remove the plugin from your 'plugins/' directory
 * Restart your redmine
 
-Note: migration is not required.
+Note: "rake redmine:plugins:migrate" is not required.
 
 == License
 
